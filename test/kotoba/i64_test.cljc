@@ -4,7 +4,7 @@
   defect this namespace is meant to prevent lives on the other side."
   (:require [clojure.test :refer [deftest is testing]]
             [kotoba.i64 :as i64]
-            [clojure.string]))
+            [kotoba.lang.text]))
 
 (deftest range-boundaries
   (is (= "-9223372036854775808" (i64/->string i64/min-i64)))
@@ -71,4 +71,4 @@
   ;; cljs renders a bigint with a trailing `n` in some contexts, and that
   ;; difference has reached content-addressed output before.
   (is (= "42" (i64/->string (i64/->i64 42))))
-  (is (not (clojure.string/includes? (i64/->string (i64/->i64 42)) "n"))))
+  (is (not (kotoba.lang.text/includes? (i64/->string (i64/->i64 42)) "n"))))
