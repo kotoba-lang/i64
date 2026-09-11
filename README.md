@@ -80,7 +80,7 @@ recording *why* each cljs branch is shaped the way it is (the floor-division
 
 ```sh
 clojure -M:test                                    # JVM
-npx nbb@1.4.210 --classpath src:test run-tests.cljs  # ClojureScript
+npx nbb@1.4.210 --classpath src:test run-tests.cljk  # ClojureScript
 ```
 
 Both run the **same** `.cljc` suite. A 64-bit library checked only on the JVM
