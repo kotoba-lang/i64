@@ -79,7 +79,7 @@ recording *why* each cljs branch is shaped the way it is (the floor-division
 ## Verify
 
 ```sh
-clojure -M:test                                    # JVM
+kbb -M:test                                    # JVM
 npx nbb@1.4.210 --classpath src:test run-tests.cljk  # ClojureScript
 ```
 
