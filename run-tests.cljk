@@ -5,7 +5,7 @@
 ;; nbb prints its own summary; this only supplies the exit code, because a
 ;; suite that fails while exiting 0 is worse than one that does not run.
 (ns run-tests
-  (:require [clojure.test :as t]
+  (:require [kotoba.test :as t]
             [kotoba.i64-test]))
 
 (defmethod t/report [:cljs.test/default :end-run-tests] [m]

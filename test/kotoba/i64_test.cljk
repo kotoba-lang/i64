@@ -2,7 +2,7 @@
   "Runs on BOTH runtimes on purpose. A 64-bit library checked only on the JVM
   is checked on the host that already had the semantics for free -- every
   defect this namespace is meant to prevent lives on the other side."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [kotoba.i64 :as i64]
             [kotoba.lang.text]))
 
