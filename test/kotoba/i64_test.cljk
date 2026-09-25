@@ -62,9 +62,9 @@
   ;; The JVM masks a shift count modulo 64 silently, so `(shl x 64)` is a
   ;; no-op there and something else elsewhere. Refusing keeps the two hosts
   ;; from disagreeing with a plausible number.
-  (is (thrown? #?(:clj clojure.lang.ExceptionInfo :cljs :default)
+  (is (thrown? :default
                (i64/shl (i64/->i64 1) 64)))
-  (is (thrown? #?(:clj clojure.lang.ExceptionInfo :cljs :default)
+  (is (thrown? :default
                (i64/ashr (i64/->i64 1) -1))))
 
 (deftest string-rendering-has-no-host-suffix
